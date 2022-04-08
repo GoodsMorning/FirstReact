@@ -1,18 +1,25 @@
 
-import './App.css';
-// import { Link } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import Navbar from './layout/navbar';
+import Home from './layout/home'
+import Profile from './components/profile';
+import Footer from './layout/footer';
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <h1>App Func</h1>
-          {/* <Link to= "/profile" > Profile </Link> */}
-        </div>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar/>
+        <Routes>
+          <Route exact path="/" element = {<Home/>}/>
+          <Route exact path="/profile" element = {<Profile/>}/>
+          {/* <Route exact path="/todo" element= {}/> */}
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
   );
 }
 
