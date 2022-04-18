@@ -11,7 +11,8 @@ function profileReducer ( state = initialState , action ){
             return{
                 ...state,
                 numberOfProfile : state.numberOfProfile + 1,
-                // profile: state.profile.append(action.payload),
+                // profile: [...state.profile,action.payload.text+(state.numberOfProfile+1)],
+                profile: [...state.profile,action.payload],
             };
 
         default:

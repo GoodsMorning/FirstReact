@@ -1,10 +1,17 @@
-import { applyMiddleware, createStore } from "redux";
-import profileReducer from "./profile/profileReducer";
+import { applyMiddleware, createStore ,combineReducers } from "redux";
 
 import logger from "redux-logger";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-const store = createStore(profileReducer,
+import profileReducer from "./profile/profileReducer";
+import parameterReducer from "./parameter/parameterReducer";
+
+const rootReducer = combineReducers({
+    profile : profileReducer,
+    parameter : parameterReducer,
+})
+
+const store = createStore(rootReducer,
     composeWithDevTools(applyMiddleware(logger)))
 
 export default store ;

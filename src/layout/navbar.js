@@ -1,15 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import '../css/navbar.css'
 
+import { Container,Nav,Navbar } from 'react-bootstrap';
 
-export default function Navbar() {
+export default function navbar() {
   return (
-    <nav>
-        <span> Navbar </span>
-        <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
-        <Link to='/todo'>To do</Link>
-    </nav>
+    <Navbar sticky="top"  bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="/">HOME</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/profile">Profile</Nav.Link>
+            <Nav.Link href="/todo">To Do</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
+

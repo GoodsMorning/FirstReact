@@ -1,9 +1,12 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+import './css/app.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Navbar from './layout/navbar';
 import Home from './layout/home'
-import Profile from './components/profile';
+import Profile from './layout/profile';
 import Footer from './layout/footer';
 
 

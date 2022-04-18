@@ -1,6 +1,9 @@
 import profileTypes from './profileTypes'
 
-export function addProfile(){
-    return { type: profileTypes.ADD_PROFILE } 
+export function addProfile(value){
+    return { 
+        type: profileTypes.ADD_PROFILE,
+        payload: value
+    } 
 }
 

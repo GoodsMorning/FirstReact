@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Anek_Tamil;
+    src: url(../asset/font/AnekTamil-Regular.woff);
+}
+
+div {
+    font-family: Anek_Tamil;
+}
+

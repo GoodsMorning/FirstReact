@@ -1,0 +1,7 @@
+const parameterTypes = {
+    SET_PARAMETER_COMPONENT:'SET_PARAMETER_COMPONENT',
+    SET_PARAMETER_DATA:     'SET_PARAMETER_DATA',
+    SET_PARAMETER_ITEMS:    'SET_PARAMETER_ITEMS',
+}
+
+export default parameterTypes;
